@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Train Time</title>    
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="./assets/style.css">    
+</head>
+
+<body>
+
+  <div class="container">
+
+      <div class="jumbotron" style="background-color: blue; color: white">
+        <h1 class="text-center">All Aboard! It is Train Time!</h1>
+        <h3 class="text-center">Choo Choo! Choo Choo!</h3>
+      </div>
+  
+      <div class="row">  
+        <div class="col-md-12">  
+          <div class="card mb-4">
+            <div class="card-header">Current Train Schedule</div>
+            <div class="card-body">
+              
+              <table class="table table-sm table-hover" id='train-table'>
+                
+                <thead>
+                  <tr>
+                    <th scope="col">Train Name</th>
+                    <th scope="col">Destination</th>
+                    <th scope="col">Frequency (min)</th>
+                    <th scope="col">Next Arrival</th>
+                    <th scope="col">Minutes Away</th>
+                  </tr>
+                </thead>
+                
+                <tbody>
+                    <tr>
+                        <td>Cincinnati Express</td>
+                        <td>Cincinnati</td>
+                        <td>50</td>
+                        <td>23:00</td>
+                        <td>24</td>
+                    </tr>
+                    <tr>
+                        <td>Atlanta Night Train</td>
+                        <td>Atlanta</td>
+                        <td>60</td>
+                        <td>12:00</td>
+                        <td>15</td>    
+                        </tr>
+                    <tr>
+                        <td>Norfolk National</td>
+                        <td>Norfolk</td>
+                        <td>120</td>
+                        <td>12:00</td>
+                        <td>30</td>
+                    </tr>
+                    <tr>
+                        <td>Philly Eagle</td>
+                        <td>Philadelphia</td>
+                        <td>240</td>
+                        <td>07:00</td>
+                        <td>120</td>
+                    </tr>
+                    <tr>
+                        <td>Chattanooga Choo Choo</td>
+                        <td>Chattanooga</td>
+                        <td>360</td>
+                        <td>14:00</td>
+                        <td>240</td>
+                    </tr>
+                </tbody>
+
+              </table>
+
+            </div>
+          </div>
+        </div>
+      </div>
+  
+      <div class="row">
+        <div class="col-md-12">
+          <div class="card mb-4">
+            <div class="card-header">Add Train</div>
+            <div class="card-body">
+  
+              <form>
+                <div class="form-group">
+                  <label for="train-name-input">Train Name</label>
+                  <input class="form-control" id="train-name-input" placeholder="Chicago MagnaTrain" type="text">
+                </div>
+                <div class="form-group">
+                  <label for="destination-input">Destination</label>
+                  <input class="form-control" id="destination-input" placeholder="Midway Airport" type="text">
+                </div>
+                <div class="form-group">
+                  <label for="start-train-input">First Train Time (Military Time)</label>
+                  <input class="form-control" id="start-train-input" placeholder="07:11" type="text">
+                </div>
+                <div class="form-group">
+                  <label for="frequency-rate-input">Frequency (min)</label>
+                  <input class="form-control" id="frequency-rate-input" placeholder="100" type="text">
+                </div>
+                <button class="btn btn-primary float-right" id="add-train-btn">Submit</button>
+              </form>
+  
+            </div>
+          </div>
+        </div>
+      </div>
+  
+    </div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+<!-- Firebase Reference-->
+<script src="https://www.gstatic.com/firebasejs/7.0.0/firebase-app.js"></script>
+
+<!-- Moment.js Reference -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.2/moment.min.js"></script>
+
+</body>
+</html>
